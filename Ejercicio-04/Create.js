@@ -1,0 +1,1 @@
+new CalculadoraCientifica().load()

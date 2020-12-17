@@ -1,0 +1,1 @@
+new Calculadora().load()

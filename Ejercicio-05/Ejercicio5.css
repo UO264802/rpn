@@ -1,0 +1,133 @@
+body {
+    background: rgb(214, 214, 214);
+    color: white;
+    margin: 0;
+}
+
+* {
+    outline: none;
+}
+
+.calculator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(95, 95, 95);
+    color: white;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
+    width: calc(70px * 5 + 1px * 2 * 5 + 2 * 3px); /* boton * columnas + margenBoton * 2 * columnas + 2 * margenCalculadora */
+}
+
+.display {
+    height: 60px;
+    padding: 25px 0;
+    background: rgb(95, 95, 95);
+    color: #ffffff;
+}
+
+.button-container {
+    display: grid;
+    justify-content: space-around;
+    align-content: space-around;
+    grid-template-columns: repeat(5, auto);
+    padding: 3px;
+}
+
+button {
+    user-select: none;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(70, 70, 70);
+    border: none;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+    transition-duration: 150ms;
+    border-color: #535353;
+    width: 70px;
+    height: 40px;
+    margin: 1px;
+}
+
+button:hover {
+    background: rgb(141, 141, 141);
+    color: white;
+    border: 1px solid;
+}
+
+button:active, button.active {
+    background: rgb(180, 180, 180);
+    color: white;
+}
+
+button:disabled {
+    background: rgb(95, 95, 95);
+    color: #a3a3a3;
+    cursor: default;
+}
+
+button.button-calculate {
+    font-weight: bolder;
+}
+
+button.button-calculate:hover {
+    background: rgb(255, 42, 42);
+    color: #ffffff;
+}
+
+button.button-calculate:active {
+    background: rgb(204, 55, 55);
+    color: #e2e2e2;
+}
+
+button.numeric {
+    background: rgb(48, 48, 48);
+    color: white;
+	font-weight: bold;
+}
+
+button.numeric:hover {
+    background: rgb(94, 94, 94);
+    color: white;
+}
+
+button.numeric:active {
+    background: rgb(139, 139, 139);
+    color: white;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    text-align: right;
+    font-weight: normal;
+    line-height: 60px;
+    transition-duration: 200ms;
+    color: white;
+    background: rgb(95, 95, 95);
+    
+}
+
+input.error {
+    color: #3a3a3a;
+    background: rgb(95, 95, 95);
+}
+
+input::selection {
+    background: rgb(95, 95, 95);
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+    background: rgb(95, 95, 95);
+}
